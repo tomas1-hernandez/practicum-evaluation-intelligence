@@ -170,6 +170,8 @@ summary: 2258 evaluations, 222 agencies, 217 agencies with text-based profile ou
 
 The interactive dashboard allows leadership to review agency profiles, concern flags, and yearly trends without running the backend code.
 
+**Live app:** [View Placement Quality Dashboard](https://umssw-placement-quality-dashboard.streamlit.app/)
+
 ```bash
 streamlit run src/app.py
 ```
