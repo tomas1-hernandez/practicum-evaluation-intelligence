@@ -1,15 +1,40 @@
-# sensitive data
-data/raw/
-
-
-# environment and credentials
-.env
-venv/
+# Python cache and compiled files
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
 
-# system files
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Test and type-check caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+htmlcov/
+
+# OS and editor noise
 .DS_Store
 Thumbs.db
 
-desktop.ini
+# Local VS Code settings
+.vscode/settings.json
+
+# Environment and secrets
+.env
+.env.*
+*.env
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+
+# Local dev container files
+.devcontainer/
+
+# Private or local-only raw data folders
+data/
