@@ -1,25 +1,76 @@
-"""Shared project constants for practicum evaluation intelligence.
+"""Shared constants for practicum evaluation intelligence."""
 
-This file holds the repeated lists and labels that show up across the pipeline,
-figure script, and dashboard. Keeping them here makes the project easier to
-read and easier to update later.
+# survey question text
+survey_questions = {
+    "prepared_for_practice": "I was prepared to practice as a BSW or MSW practitioner in my practicum agency.",
+    "learning_goals_met": "My experience at my practicum agency met the learning goals identified in the learning agreement.",
+    "supervision_frequency": "I was satisfied with the frequency of supervision offered by my AFI.",
+    "supervision_quality": "I was satisfied with the quality of supervision by my agency field supervisor.",
+    "felt_prepared": "I feel prepared and competent to practice social work after my BSW or MSW practicum experience.",
+    "most_helpful": "What about your practicum agency was most helpful or educational?",
+    "least_helpful": "What about your practicum agency was least helpful or educational?",
+    "recommend": "Would you recommend your practicum agency to another student?",
+    "recommend_reason": "Why or why not?",
+    "comments_supervisor": "Additional comments about AFI and/or use of supervision.",
+    "other_comments": "Anything else you would like us to know about your practicum experience?",
+}
 
-The goal is simple: one source of truth for column names, display labels, and
-common text cleanup choices.
-"""
+# Likert coding
+likert_map = {
+    "strongly disagree": 1,
+    "somewhat disagree": 2,
+    "neither agree nor disagree": 3,
+    "somewhat agree": 4,
+    "strongly agree": 5,
+}
 
-from __future__ import annotations
+# program level mapping
+program_level_map = {
+    "bsw": "bsw",
+    "generalist": "msw",
+    "specialization": "msw",
+}
 
+program_level_display_map = {
+    "bsw": "BSW",
+    "generalist": "MSW",
+    "specialization": "MSW",
+}
+
+# figure labels for BSW/MSW comparison
+placement_metric_labels_long = {
+    "Placement Quality Score": "Placement Quality Score (overall)",
+    "felt_prepared": "Felt prepared for practice overall",
+    "learning_goals_met": "Learning goals met",
+    "prepared_for_practice": "Prepared to practice in this agency",
+    "supervision_frequency": "Supervision frequency",
+    "supervision_quality": "Supervision quality",
+}
+
+# competency reference columns
+competency_cols = [
+    "competency_1",
+    "competency_2",
+    "competency_3",
+    "competency_4",
+    "competency_5",
+    "competency_6",
+    "competency_7",
+    "competency_8",
+    "competency_9",
+]
+
+# structured survey columns
 likert_cols = [
-    "comp_1_professional_dev",
-    "comp_2_ethical_decisions",
-    "comp_3_critical_thinking",
-    "comp_4_aradei",
-    "comp_5_human_rights_justice",
-    "comp_6_research_practice",
-    "comp_7_human_behavior",
-    "comp_8_policy_practice",
-    "comp_9_direct_practice",
+    "comp_1_ethical_professional",
+    "comp_2_human_rights_justice",
+    "comp_3_adei",
+    "comp_4_research_informed",
+    "comp_5_policy_practice",
+    "comp_6_engage",
+    "comp_7_assess",
+    "comp_8_intervene",
+    "comp_9_evaluate",
     "felt_prepared",
     "learning_goals_met",
     "prepared_for_practice",
@@ -27,7 +78,7 @@ likert_cols = [
     "supervision_quality",
 ]
 
-fit_score_cols = [
+placement_quality_cols = [
     "felt_prepared",
     "learning_goals_met",
     "prepared_for_practice",
@@ -43,16 +94,17 @@ text_cols = [
     "recommend_reason",
 ]
 
+# display labels
 likert_display = {
-    "comp_1_professional_dev": "comp 1: professional development",
-    "comp_2_ethical_decisions": "comp 2: ethical decisions",
-    "comp_3_critical_thinking": "comp 3: critical thinking",
-    "comp_4_aradei": "comp 4: aradei",
-    "comp_5_human_rights_justice": "comp 5: human rights and justice",
-    "comp_6_research_practice": "comp 6: research practice",
-    "comp_7_human_behavior": "comp 7: human behavior",
-    "comp_8_policy_practice": "comp 8: policy practice",
-    "comp_9_direct_practice": "comp 9: direct practice",
+    "comp_1_ethical_professional": "comp 1: ethical and professional behavior",
+    "comp_2_human_rights_justice": "comp 2: human rights and social justice",
+    "comp_3_adei": "comp 3: anti-racism, diversity, equity, and inclusion",
+    "comp_4_research_informed": "comp 4: practice-informed research",
+    "comp_5_policy_practice": "comp 5: policy practice",
+    "comp_6_engage": "comp 6: engage with individuals and communities",
+    "comp_7_assess": "comp 7: assess individuals and communities",
+    "comp_8_intervene": "comp 8: intervene with individuals and communities",
+    "comp_9_evaluate": "comp 9: evaluate practice",
     "felt_prepared": "felt prepared overall",
     "learning_goals_met": "learning goals met",
     "prepared_for_practice": "prepared for practice",
@@ -60,7 +112,8 @@ likert_display = {
     "supervision_quality": "supervision quality",
 }
 
-detail_metrics = {
+# compact placement quality labels
+placement_metric_labels = {
     "felt_prepared": "felt prepared",
     "learning_goals_met": "learning goals met",
     "prepared_for_practice": "prepared for practice",
@@ -68,6 +121,7 @@ detail_metrics = {
     "supervision_quality": "supervision quality",
 }
 
+# theme display labels
 theme_labels = {
     "administrative_overload_helpful_pct": "administrative work - helpful",
     "administrative_overload_least_pct": "administrative overload - least helpful",
@@ -83,6 +137,7 @@ theme_labels = {
     "strong_supervision_least_pct": "supervision concerns - least helpful",
 }
 
+# stopwords
 stopword_list = (
     "a",
     "about",
@@ -180,6 +235,7 @@ stopword_list = (
     "of",
     "often",
     "on",
+    "one",
     "only",
     "or",
     "other",
@@ -223,6 +279,7 @@ stopword_list = (
     "through",
     "time",
     "to",
+    "too",
     "ve",
     "very",
     "was",
