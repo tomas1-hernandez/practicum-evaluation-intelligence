@@ -1,0 +1,17 @@
+metric,bsw_mean,bsw_n,msw_mean,msw_n,difference,t_statistic,p_value,significant
+Placement Quality Score,3.697,856,3.82,1402,0.124,-2.513,0.0121,yes
+Recommendation rate,0.665,856,0.697,1402,0.032,-1.585,0.1132,no
+felt prepared,3.55,856,3.577,1390,0.027,-0.431,0.6663,no
+learning goals met,3.673,856,3.865,1402,0.192,-3.269,0.0011,yes
+prepared for practice,3.588,856,3.774,1402,0.186,-2.973,0.003,yes
+supervision frequency,3.909,856,4.001,1402,0.092,-1.687,0.0917,no
+supervision quality,3.764,856,3.874,1402,0.11,-1.873,0.0612,no
+comp 1: ethical and professional behavior,3.643,856,3.835,1402,0.193,-3.279,0.0011,yes
+comp 2: human rights and social justice,3.806,856,4.001,1402,0.195,-3.642,0.0003,yes
+"comp 3: anti-racism, diversity, equity, and inclusion",3.901,856,4.044,1402,0.144,-2.684,0.0073,yes
+comp 4: practice-informed research,3.621,856,3.816,1402,0.194,-3.465,0.0005,yes
+comp 5: policy practice,3.704,856,3.852,1402,0.148,-2.721,0.0066,yes
+comp 6: engage with individuals and communities,3.592,856,3.763,1402,0.171,-2.969,0.003,yes
+comp 7: assess individuals and communities,3.759,856,3.932,1402,0.173,-3.095,0.002,yes
+comp 8: intervene with individuals and communities,3.634,856,3.766,1402,0.132,-2.341,0.0194,yes
+comp 9: evaluate practice,3.485,856,3.702,1402,0.217,-3.39,0.0007,yes

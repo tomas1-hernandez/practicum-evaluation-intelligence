@@ -1,0 +1,7 @@
+Variable,n,mean,sd,min,median,max
+Placement Quality Score,222,3.829,0.462,2.49,3.8,4.93
+Recommendation rate (%),222,69.95,19.298,17.0,67.0,100.0
+Sentiment score,222,0.315,0.094,0.0,0.311,0.568
+Response count,222,10.171,12.738,1.0,6.0,124.0
+Concern indicator count,222,1.09,1.012,0.0,1.0,4.0
+Mean competency score,217,89.62,1.181,86.3,89.56,93.21

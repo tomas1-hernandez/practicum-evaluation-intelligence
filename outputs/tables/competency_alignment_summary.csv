@@ -1,0 +1,218 @@
+agency_name,agency_name_display,response_count,mean_competency_score,placement_quality_score,overall_sentiment_score,recommendation_rate,concern_flag,misalignment_flag,fit_trend,competency_quality_gap
+billings public schools,Billings Public Schools,7,90.34,2.49,0.195,0.43,review recommended,no flag,declining,40.54
+valley cities behavioral health care,Valley Cities Behavioral Health Care,4,89.7,2.5,0.2817,0.75,review recommended,no flag,stable,39.7
+rimrock foundation,Rimrock Foundation,26,89.38,2.69,0.1919,0.42,review recommended,no flag,stable,35.58
+trotting horse therapeutic riding,Trotting Horse Therapeutic Riding,4,90.38,2.8,0.29,0.25,review recommended,no flag,declining,34.38
+catholic charities,Catholic Charities,4,91.04,2.9,0.0332,0.25,review recommended,score-narrative mismatch,stable,33.04
+988 tribal response,988 Tribal Response,5,89.8,2.84,0.1716,0.2,review recommended,no flag,declining,33.0
+germane and wise mental health consulting,Germane And Wise Mental Health Consulting,6,88.64,2.94,0.2819,0.17,review recommended,no flag,declining,29.84
+littleton public schools,Littleton Public Schools,3,88.3,2.93,0.3095,0.33,review recommended,no flag,declining,29.7
+connections corrections program,Connections Corrections Program,3,89.65,3.0,0.2343,0.33,review recommended,no flag,declining,29.65
+blackfeet community college,Blackfeet Community College,13,90.23,3.03,0.2098,0.54,review recommended,no flag,declining,29.63
+sexual trauma awareness and response,Sexual Trauma Awareness And Response,3,91.94,3.13,0.2828,0.67,review recommended,no flag,stable,29.34
+university of phoenix,University Of Phoenix,5,91.51,3.12,0.1923,0.2,review recommended,no flag,declining,29.11
+chippewa cree tribe human services division,Chippewa Cree Tribe Human Services Division,4,90.76,3.1,0.2944,0.75,review recommended,no flag,stable,28.76
+behavioral health resources,Behavioral Health Resources,12,88.96,3.02,0.1372,0.33,review recommended,no flag,declining,28.56
+slo recovery center,Slo Recovery Center,3,91.0,3.13,0.3033,0.33,review recommended,no flag,declining,28.4
+riverwalk crisis receiving center,Riverwalk Crisis Receiving Center,3,91.53,3.2,0.2915,0.67,review recommended,no flag,declining,27.53
+catalyst mt,Catalyst Mt,8,88.47,3.05,0.2714,0.62,review recommended,no flag,stable,27.47
+ag worker health and services,Ag Worker Health And Services,7,89.02,3.09,0.2478,0.57,review recommended,no flag,declining,27.22
+eduro healthcare,Eduro Healthcare,4,90.15,3.15,0.2093,0.5,review recommended,no flag,improving,27.15
+summit independent living,Summit Independent Living,5,89.23,3.12,0.2619,0.6,review recommended,no flag,declining,26.83
+affordable housing trust fund,Affordable Housing Trust Fund,6,90.05,3.2,0.2552,0.5,review recommended,no flag,declining,26.05
+planned parenthood of montana,Planned Parenthood Of Montana,11,90.33,3.24,0.3139,0.73,no flag,no flag,declining,25.53
+great falls rescue mission cameron family center,Great Falls Rescue Mission Cameron Family Center,4,92.08,3.35,0.2829,0.75,review recommended,no flag,stable,25.08
+green apple behavioral health,Green Apple Behavioral Health,3,92.76,3.4,0.1899,0.33,review recommended,no flag,stable,24.76
+peachtree pediatric therapy center,Peachtree Pediatric Therapy Center,4,88.43,3.2,0.028,0.25,review recommended,score-narrative mismatch,stable,24.43
+friends of the children montana,Friends Of The Children Montana,6,89.8,3.27,0.2673,0.5,review recommended,no flag,stable,24.4
+greater valley health center,Greater Valley Health Center,14,89.94,3.3,0.3281,0.64,review recommended,no flag,stable,23.94
+fair-mont-egan school,Fair-Mont-Egan School,7,89.52,3.31,0.2809,0.57,review recommended,no flag,stable,23.32
+postpartum resource group,Postpartum Resource Group,3,90.75,3.4,0.2717,0.67,review recommended,no flag,stable,22.75
+abbie shelter,Abbie Shelter,13,90.1,3.38,0.2172,0.46,review recommended,no flag,declining,22.5
+missoula public library,Missoula Public Library,8,88.46,3.3,0.2492,0.62,review recommended,no flag,improving,22.46
+southwest montana community health center,Southwest Montana Community Health Center,5,89.55,3.36,0.25,0.6,review recommended,no flag,improving,22.35
+thrive,Thrive,6,91.48,3.5,0.2531,0.5,no flag,no flag,improving,21.48
+aspen counseling services,Aspen Counseling Services,13,91.39,3.51,0.2284,0.54,no flag,no flag,declining,21.19
+sheridan memorial hospital,Sheridan Memorial Hospital,5,89.83,3.44,0.2195,0.6,review recommended,no flag,declining,21.03
+the parenting place,The Parenting Place,6,89.79,3.44,0.3644,0.5,review recommended,no flag,declining,20.99
+one health,One Health,3,92.77,3.6,0.2039,0.67,review recommended,no flag,stable,20.77
+aware inc,Aware Inc.,22,89.91,3.46,0.3145,0.68,review recommended,no flag,stable,20.71
+salem keizer school district,Salem Keizer School District,6,89.2,3.43,0.2834,0.5,review recommended,no flag,declining,20.6
+montana innocence project,Montana Innocence Project,14,88.59,3.4,0.2824,0.5,review recommended,no flag,declining,20.59
+bozeman school district 7,Bozeman School District 7,11,89.49,3.45,0.3471,0.55,review recommended,no flag,improving,20.49
+bridgercare,Bridgercare,7,90.27,3.49,0.2483,0.71,no flag,no flag,declining,20.47
+juvenile probation,Juvenile Probation,5,90.74,3.52,0.3021,0.6,no flag,no flag,improving,20.34
+lynn rice therapy,Lynn Rice Therapy,5,89.72,3.47,0.2613,0.6,review recommended,no flag,improving,20.32
+russell elementary,Russell Elementary,3,89.65,3.47,0.1505,0.67,review recommended,no flag,stable,20.25
+crisis connections,Crisis Connections,9,90.59,3.53,0.1837,0.56,review recommended,no flag,stable,19.99
+encompass community service,Encompass Community Service,10,92.36,3.62,0.2854,0.4,no flag,no flag,declining,19.96
+missoula police department,Missoula Police Department,18,89.51,3.48,0.2546,0.61,review recommended,no flag,stable,19.91
+gallatin high school,Gallatin High School,3,86.3,3.33,0.1866,0.67,review recommended,no flag,stable,19.7
+the salvation army,The Salvation Army,5,89.19,3.48,0.1952,0.4,review recommended,no flag,stable,19.59
+logan health medical center,Logan Health Medical Center,20,89.15,3.48,0.3953,0.6,review recommended,no flag,declining,19.55
+many rivers whole health,Many Rivers Whole Health,12,90.06,3.53,0.2976,0.58,no flag,no flag,stable,19.46
+ywca,Ywca,41,89.35,3.5,0.2874,0.66,no flag,no flag,stable,19.35
+families first learning lab,Families First Learning Lab,21,89.62,3.52,0.2865,0.57,no flag,no flag,stable,19.22
+brighton recovery center,Brighton Recovery Center,3,88.38,3.46,0.0729,0.67,review recommended,no flag,declining,19.18
+prairie hills recovery center,Prairie Hills Recovery Center,4,89.1,3.5,0.3112,0.75,no flag,no flag,declining,19.1
+western montana's lgbtq+ community center,Western Montana's Lgbtq+ Community Center,3,92.44,3.67,0.3948,0.67,review recommended,no flag,stable,19.04
+women's resource center,Women's Resource Center,9,89.94,3.55,0.1991,0.56,no flag,no flag,improving,18.94
+paxson elementary school,Paxson Elementary School,13,89.53,3.54,0.2167,0.62,no flag,no flag,stable,18.73
+benefis health system,Benefis Health System,21,89.12,3.53,0.3301,0.57,review recommended,no flag,improving,18.52
+montana state hospital,Montana State Hospital,28,90.51,3.6,0.259,0.61,no flag,no flag,stable,18.51
+international rescue committee,International Rescue Committee,40,89.75,3.57,0.2713,0.62,no flag,no flag,declining,18.35
+montana 10,Montana 10,22,89.72,3.57,0.3089,0.68,no flag,no flag,stable,18.32
+the refuge,The Refuge,9,89.84,3.58,0.2892,0.44,no flag,no flag,declining,18.24
+acenda integrated health,Acenda Integrated Health,4,88.9,3.55,0.2456,0.75,no flag,no flag,stable,17.9
+lewis and clark county detention center,Lewis And Clark County Detention Center,5,89.9,3.6,0.3313,0.8,no flag,no flag,declining,17.9
+crosswinds recovery,Crosswinds Recovery,35,89.47,3.58,0.2672,0.63,no flag,no flag,declining,17.87
+imperial county behavioral health,Imperial County Behavioral Health,3,91.24,3.67,0.2107,1.0,no flag,no flag,stable,17.84
+parents helping parents,Parents Helping Parents,7,89.69,3.63,0.2075,0.71,no flag,no flag,declining,17.09
+turning winds,Turning Winds,6,87.65,3.53,0.3918,0.67,review recommended,no flag,stable,17.05
+307 therapy,307 Therapy,8,89.4,3.62,0.1693,0.75,no flag,no flag,declining,17.0
+lincoln county probation department,Lincoln County Probation Department,3,90.23,3.67,0.2787,0.33,no flag,no flag,declining,16.83
+frontier behavioral health,Frontier Behavioral Health,14,89.82,3.65,0.3365,0.71,no flag,no flag,improving,16.82
+vocational rehab,Vocational Rehab,11,90.52,3.69,0.2419,0.64,no flag,no flag,declining,16.72
+youth homes,Youth Homes,61,89.5,3.64,0.323,0.77,no flag,no flag,declining,16.7
+hamilton school district 3,Hamilton School District 3,5,89.42,3.64,0.3103,0.6,review recommended,no flag,stable,16.62
+the hope wellness center,The Hope Wellness Center,9,88.21,3.58,0.3199,0.67,no flag,no flag,improving,16.61
+the village,The Village,3,91.17,3.73,0.2775,0.33,review recommended,no flag,stable,16.57
+empowermt,Empowermt,33,89.57,3.65,0.2828,0.7,no flag,no flag,declining,16.57
+franklin pierce school district,Franklin Pierce School District,4,89.39,3.65,0.4768,0.75,no flag,no flag,stable,16.39
+eating disorder center of montana,Eating Disorder Center Of Montana,13,88.09,3.59,0.3036,0.62,review recommended,no flag,declining,16.29
+united way of the lewis and clark area,United Way Of The Lewis And Clark Area,6,87.68,3.57,0.3097,0.5,review recommended,no flag,improving,16.28
+youth crisis center inc,Youth Crisis Center Inc.,9,89.13,3.66,0.2878,0.67,review recommended,no flag,improving,15.93
+wyoming behavioral institute,Wyoming Behavioral Institute,3,90.44,3.73,0.3144,0.67,no flag,no flag,stable,15.84
+lincoln families,Lincoln Families,3,90.39,3.73,0.3356,0.67,no flag,no flag,stable,15.79
+missoula county public schools,Missoula County Public Schools,7,89.51,3.69,0.357,0.71,no flag,no flag,stable,15.71
+missoula early head start,Missoula Early Head Start,9,89.53,3.71,0.3222,0.78,no flag,no flag,stable,15.33
+haven,Haven,8,89.82,3.73,0.2919,0.75,no flag,no flag,improving,15.22
+child and family service department,Child And Family Service Department,79,89.22,3.71,0.2845,0.65,no flag,no flag,stable,15.02
+symmetry counseling,Symmetry Counseling,3,89.46,3.73,0.268,0.67,no flag,no flag,improving,14.86
+student advocacy resource center,Student Advocacy Resource Center,32,89.44,3.73,0.3062,0.66,no flag,no flag,stable,14.84
+partners in home care,Partners In Home Care,24,89.41,3.73,0.2456,0.62,no flag,no flag,declining,14.81
+u.s. marshals service,U.S. Marshals Service,3,88.15,3.67,0.2813,0.33,no flag,no flag,declining,14.75
+santiam hospital & clinics,Santiam Hospital & Clinics,3,88.11,3.67,0.2772,0.33,no flag,no flag,stable,14.71
+reading partners south carolina,Reading Partners South Carolina,6,90.05,3.77,0.3075,0.5,no flag,no flag,declining,14.65
+crime victim advocate program,Crime Victim Advocate Program,19,89.04,3.72,0.328,0.53,no flag,no flag,declining,14.64
+intermountain,Intermountain,9,90.01,3.78,0.3081,0.78,no flag,no flag,improving,14.41
+montana judicial branch,Montana Judicial Branch,6,89.81,3.77,0.1899,0.67,review recommended,no flag,improving,14.41
+sierra nevada memorial hospital,Sierra Nevada Memorial Hospital,6,88.98,3.73,0.2368,0.83,no flag,no flag,stable,14.38
+helena indian alliance,Helena Indian Alliance,8,87.37,3.65,0.2481,0.75,no flag,no flag,stable,14.37
+missoula parks and recreation,Missoula Parks And Recreation,9,89.72,3.78,0.3205,0.67,no flag,no flag,declining,14.12
+ramsey magnet school of science,Ramsey Magnet School Of Science,5,88.45,3.72,0.2071,0.6,no flag,no flag,stable,14.05
+la family housing,La Family Housing,19,88.93,3.75,0.2286,0.53,review recommended,no flag,stable,13.93
+youth dynamics,Youth Dynamics,9,91.09,3.87,0.3956,0.67,no flag,no flag,declining,13.69
+aaniiih nakoda college,Aaniiih Nakoda College,9,89.62,3.8,0.3408,0.78,no flag,no flag,declining,13.62
+nasw montana,Nasw Montana,21,88.99,3.77,0.3625,0.81,no flag,no flag,stable,13.59
+dewitt rite care clinic,Dewitt Rite Care Clinic,4,88.52,3.75,0.2679,0.5,review recommended,no flag,stable,13.52
+aspen adult services,Aspen Adult Services,6,87.42,3.7,0.206,0.67,review recommended,no flag,stable,13.42
+boys and girls club,Boys And Girls Club,28,88.92,3.78,0.2707,0.71,no flag,no flag,declining,13.32
+big sky palliative & hospice,Big Sky Palliative & Hospice,29,89.65,3.82,0.3369,0.62,no flag,no flag,stable,13.25
+3 rivers mental health center,3 Rivers Mental Health Center,13,88.62,3.77,0.135,0.46,no flag,no flag,improving,13.22
+crisis text line,Crisis Text Line,22,89.93,3.84,0.3072,0.73,no flag,no flag,improving,13.13
+bureau of indian affairs,Bureau Of Indian Affairs,6,87.24,3.71,0.3049,0.67,no flag,no flag,declining,13.04
+bozeman health deaconess regional medical center,Bozeman Health Deaconess Regional Medical Center,5,90.56,3.88,0.2788,0.8,no flag,no flag,improving,12.96
+department of health and human services,Department Of Health And Human Services,18,91.0,3.91,0.3561,0.78,no flag,no flag,stable,12.8
+curry health center,Curry Health Center,124,89.3,3.83,0.3505,0.7,no flag,no flag,declining,12.7
+center for restorative youth justice,Center For Restorative Youth Justice,19,89.22,3.83,0.4034,0.68,no flag,no flag,declining,12.62
+partnership health center,Partnership Health Center,29,89.41,3.84,0.3126,0.72,no flag,no flag,stable,12.61
+california youth services,California Youth Services,9,88.78,3.82,0.3227,0.67,no flag,no flag,stable,12.38
+open aid alliance,Open Aid Alliance,22,89.7,3.87,0.3002,0.73,no flag,no flag,declining,12.3
+winds of change mental health center,Winds Of Change Mental Health Center,17,88.26,3.8,0.3243,0.59,review recommended,no flag,stable,12.26
+"rocky mountain development council, inc","Rocky Mountain Development Council, Inc.",6,88.85,3.83,0.4119,0.83,no flag,no flag,stable,12.25
+keystone therapy and training services,Keystone Therapy And Training Services,4,88.21,3.8,0.2906,0.5,review recommended,no flag,stable,12.21
+fairfax behavioral health,Fairfax Behavioral Health,3,91.8,4.0,0.3329,0.67,no flag,no flag,improving,11.8
+blaine county school district,Blaine County School District,8,90.66,3.95,0.3413,0.62,review recommended,no flag,stable,11.66
+health promotion disease prevention,Health Promotion Disease Prevention,13,90.01,3.92,0.3651,0.85,no flag,no flag,stable,11.61
+st. patrick hospital,St. Patrick Hospital,41,89.54,3.9,0.326,0.63,no flag,no flag,stable,11.54
+missoula city county health department,Missoula City County Health Department,5,88.86,3.88,0.2587,0.4,no flag,no flag,stable,11.26
+virtually assisted school team,Virtually Assisted School Team,3,91.16,4.0,0.468,1.0,no flag,no flag,declining,11.16
+mountain home montana,Mountain Home Montana,13,88.96,3.89,0.3303,0.69,no flag,no flag,improving,11.16
+"center for children, families and workforce development","Center For Children, Families And Workforce Development",44,89.4,3.92,0.3789,0.75,no flag,no flag,stable,11.0
+paris gibson alternative education,Paris Gibson Alternative Education,4,89.9,3.95,0.3185,0.75,no flag,no flag,declining,10.9
+alliance for suicide prevention of larimer county,Alliance For Suicide Prevention Of Larimer County,4,90.86,4.0,0.3241,0.75,no flag,no flag,improving,10.86
+seneca family of agencies mosaic program,Seneca Family Of Agencies Mosaic Program,3,90.8,4.0,0.3729,0.67,no flag,no flag,stable,10.8
+hopa mountain,Hopa Mountain,8,88.7,3.9,0.4171,0.88,no flag,no flag,declining,10.7
+missoula interfaith collaborative,Missoula Interfaith Collaborative,45,88.95,3.92,0.3341,0.71,no flag,no flag,declining,10.55
+bitterroot cares,Bitterroot Cares,6,88.46,3.9,0.3713,1.0,no flag,no flag,declining,10.46
+david j. thatcher va clinic,David J. Thatcher Va Clinic,10,88.36,3.9,0.2898,0.6,no flag,no flag,improving,10.36
+cedar creek integrated health,Cedar Creek Integrated Health,16,89.35,3.96,0.3674,0.62,no flag,no flag,stable,10.15
+fort belknap social services,Fort Belknap Social Services,3,91.53,4.07,0.2991,0.67,no flag,no flag,stable,10.13
+pine rest christian mental health services,Pine Rest Christian Mental Health Services,4,90.92,4.05,0.314,0.75,no flag,no flag,stable,9.92
+west county health services,West County Health Services,4,86.77,3.85,0.2853,0.75,no flag,no flag,stable,9.77
+yellowstone boys and girls ranch,Yellowstone Boys And Girls Ranch,4,90.47,4.05,0.3056,0.75,no flag,no flag,stable,9.47
+western montana mental health center,Western Montana Mental Health Center,11,88.56,3.98,0.3256,0.91,no flag,no flag,declining,8.96
+oregon aids education & training center,Oregon Aids Education & Training Center,5,90.56,4.08,0.2045,0.6,no flag,no flag,stable,8.96
+seattle children's hospital,Seattle Children's Hospital,3,88.9,4.0,0.403,1.0,no flag,no flag,stable,8.9
+bayview recovery center,Bayview Recovery Center,6,90.89,4.1,0.3348,0.67,no flag,no flag,stable,8.89
+core health,Core Health,6,90.29,4.07,0.4407,0.83,no flag,no flag,declining,8.89
+mental health coalition of teton valley,Mental Health Coalition Of Teton Valley,4,88.89,4.0,0.3234,0.75,no flag,no flag,improving,8.89
+southern piegan health center,Southern Piegan Health Center,3,90.23,4.07,0.2928,0.67,no flag,no flag,stable,8.83
+trio student support services,Trio Student Support Services,15,89.3,4.03,0.302,0.73,no flag,no flag,declining,8.7
+grandview family counseling,Grandview Family Counseling,6,90.04,4.07,0.3874,0.83,no flag,no flag,improving,8.64
+tri-valley haven,Tri-Valley Haven,4,90.45,4.1,0.3477,0.75,no flag,no flag,stable,8.45
+missoula alliance church,Missoula Alliance Church,7,90.09,4.09,0.3187,0.71,no flag,no flag,declining,8.29
+community medical center,Community Medical Center,22,90.47,4.11,0.4133,0.82,no flag,no flag,declining,8.27
+the webb schools,The Webb Schools,6,89.39,4.07,0.3433,0.67,no flag,no flag,improving,7.99
+shodair childrens hospital,Shodair Childrens Hospital,9,87.98,4.0,0.4773,0.89,no flag,no flag,stable,7.98
+climate smart missoula,Climate Smart Missoula,3,87.88,4.0,0.5378,1.0,no flag,no flag,stable,7.88
+eden health,Eden Health,11,88.78,4.05,0.3608,0.73,no flag,no flag,stable,7.78
+iris clubhouse,Iris Clubhouse,4,91.78,4.2,0.2962,0.75,no flag,no flag,stable,7.78
+providence st. joseph medical center,Providence St. Joseph Medical Center,18,88.22,4.03,0.3769,0.78,no flag,no flag,stable,7.62
+missoula aging services,Missoula Aging Services,9,90.19,4.15,0.4257,0.89,no flag,no flag,declining,7.19
+soft landing missoula,Soft Landing Missoula,8,88.15,4.05,0.4102,0.62,no flag,no flag,improving,7.15
+standing together against rape (star),Standing Together Against Rape (Star),9,88.86,4.11,0.2751,0.78,no flag,no flag,stable,6.66
+gateway to success,Gateway To Success,5,89.06,4.12,0.4879,1.0,no flag,no flag,improving,6.66
+city of olympia,City Of Olympia,6,88.02,4.07,0.3248,0.83,no flag,no flag,improving,6.62
+friends forever mentoring,Friends Forever Mentoring,3,87.55,4.07,0.503,1.0,no flag,no flag,stable,6.15
+all nations health center - behaviorial health,All Nations Health Center - Behaviorial Health,8,88.64,4.13,0.2878,0.88,no flag,no flag,improving,6.04
+helena valley addiction services,Helena Valley Addiction Services,11,90.29,4.22,0.3661,0.82,no flag,no flag,improving,5.89
+missoula food bank,Missoula Food Bank,14,89.28,4.17,0.3535,0.79,no flag,no flag,stable,5.88
+missoula senior citizens center,Missoula Senior Citizens Center,9,88.95,4.16,0.3697,0.89,no flag,no flag,improving,5.75
+stepping stones,Stepping Stones,11,88.31,4.14,0.4007,0.73,no flag,no flag,stable,5.51
+trailhead therapy & mentoring,Trailhead Therapy & Mentoring,3,88.05,4.13,0.342,1.0,no flag,no flag,stable,5.45
+clark fork valley hospital & family medicine network,Clark Fork Valley Hospital & Family Medicine Network,9,89.79,4.22,0.3731,0.78,no flag,no flag,improving,5.39
+poverello center inc,Poverello Center Inc,22,88.92,4.19,0.4348,0.86,no flag,no flag,stable,5.12
+davidson college,Davidson College,5,90.68,4.28,0.3537,0.8,no flag,no flag,declining,5.08
+kayenta health center,Kayenta  Health Center,5,88.89,4.2,0.339,1.0,no flag,no flag,stable,4.89
+cameron r-1 school district,Cameron R-1 School District,19,89.66,4.25,0.3259,0.74,no flag,no flag,improving,4.66
+vivent health,Vivent Health,4,90.61,4.3,0.3317,0.75,no flag,no flag,stable,4.61
+"new day, inc","New Day, Inc.",4,89.56,4.25,0.4938,1.0,no flag,no flag,stable,4.56
+alluvion health,Alluvion Health,3,88.41,4.2,0.0576,0.67,review recommended,no flag,declining,4.41
+missoula municipal court,Missoula Municipal Court,9,88.8,4.22,0.4387,0.56,no flag,no flag,stable,4.4
+blue mountain clinic family practice,Blue Mountain Clinic Family Practice,3,91.0,4.33,0.4353,0.67,review recommended,no flag,improving,4.4
+recreate nz,Recreate Nz,3,87.76,4.2,0.2724,1.0,no flag,no flag,stable,3.76
+youth court services,Youth Court Services,4,90.62,4.35,0.4771,1.0,no flag,no flag,stable,3.62
+sound behavioral health,Sound Behavioral Health,3,91.61,4.4,0.4185,1.0,no flag,no flag,stable,3.61
+988 suicide & crisis lifeline center,988 Suicide & Crisis Lifeline Center,4,87.6,4.2,0.4237,0.5,no flag,no flag,declining,3.6
+office of the state public defender,Office Of The State Public Defender,11,90.78,4.38,0.4129,0.91,no flag,no flag,improving,3.18
+casa for children,Casa For Children,20,89.23,4.32,0.3804,0.8,no flag,no flag,improving,2.83
+cascade academy,Cascade Academy,7,89.58,4.34,0.2317,0.86,no flag,no flag,declining,2.78
+victim services program,Victim Services Program,3,93.21,4.53,0.5401,0.67,no flag,no flag,stable,2.61
+on target aba,On Target Aba,5,89.68,4.36,0.5168,1.0,no flag,no flag,declining,2.48
+watson children's shelter,Watson Children's Shelter,8,90.01,4.38,0.35,0.88,no flag,no flag,stable,2.41
+spot to talk,Spot To Talk,9,89.12,4.36,0.4396,1.0,no flag,no flag,improving,1.92
+alaska family services,Alaska Family Services,6,89.77,4.4,0.4499,0.83,no flag,no flag,declining,1.77
+trillium family services,Trillium Family Services,4,89.66,4.4,0.3186,1.0,no flag,no flag,stable,1.66
+confederated salish and kootenai social services division,Confederated Salish And Kootenai Social Services Division,4,92.45,4.55,0.2885,1.0,no flag,no flag,stable,1.45
+linn county mental health,Linn County Mental Health,3,90.39,4.47,0.5401,1.0,no flag,no flag,stable,0.99
+hamilton school district 4,Hamilton School District 4,3,88.75,4.4,0.5677,0.67,review recommended,no flag,stable,0.75
+lowell elementary school,Lowell Elementary School,4,90.75,4.5,0.3266,1.0,no flag,no flag,improving,0.75
+first step resource center,First Step Resource Center,14,87.86,4.4,0.3602,0.86,no flag,no flag,stable,-0.14
+"emily wish, llc","Emily Wish, Llc",4,87.62,4.4,0.3764,1.0,no flag,no flag,stable,-0.38
+cheyenne regional behavioral health,Cheyenne Regional Behavioral Health,6,88.6,4.47,0.3868,1.0,no flag,no flag,improving,-0.8
+montana native women's coalition,Montana Native Women's Coalition,3,88.49,4.47,0.1893,0.67,no flag,no flag,stable,-0.91
+cochise harm reduction,Cochise Harm Reduction,4,92.26,4.7,0.3998,1.0,no flag,no flag,stable,-1.74
+habitat for humanity of gallatin valley,Habitat For Humanity Of Gallatin Valley,5,89.06,4.56,0.4362,1.0,no flag,no flag,stable,-2.14
+village healthcare center,Village Healthcare Center,3,91.26,4.67,0.3447,0.67,no flag,no flag,stable,-2.14
+disability determination services,Disability Determination Services,3,90.53,4.67,0.5148,1.0,no flag,no flag,stable,-2.87
+denver human services,Denver Human Services,3,90.48,4.67,0.1549,1.0,no flag,no flag,stable,-2.92
+spotted bull recovery resource center,Spotted Bull Recovery Resource Center,7,89.32,4.63,0.4316,1.0,no flag,no flag,declining,-3.28
+shepherd's pantry,Shepherd's Pantry,3,90.24,4.73,0.4285,1.0,no flag,no flag,stable,-4.36
+"timberline counseling, llc","Timberline Counseling, Llc",4,87.12,4.65,0.4262,1.0,no flag,no flag,stable,-5.88
+kent school district,Kent School District,4,88.94,4.75,0.5459,1.0,no flag,no flag,stable,-6.06
+community healthcore,Community Healthcore,3,90.72,4.87,0.3139,1.0,no flag,no flag,stable,-6.68
+asum bear necessities,Asum Bear Necessities,3,87.79,4.73,0.4926,1.0,no flag,no flag,stable,-6.81
+community safety network,Community Safety Network,3,88.7,4.8,0.4232,1.0,no flag,no flag,stable,-7.3
+denver public schools,Denver Public Schools,3,90.5,4.93,0.2895,1.0,no flag,no flag,stable,-8.1
