@@ -1,63 +1,306 @@
-"""Project settings for practicum evaluation intelligence.
+"""Shared constants for practicum evaluation intelligence."""
 
-This file keeps the main paths and decision rules in one place so the rest of
-the project does not have hard-coded values scattered everywhere. If the data
-file, output folders, or review thresholds ever need to change, this is the
-first place to look.
+# survey question text
+survey_questions = {
+    "prepared_for_practice": "I was prepared to practice as a BSW or MSW practitioner in my practicum agency.",
+    "learning_goals_met": "My experience at my practicum agency met the learning goals identified in the learning agreement.",
+    "supervision_frequency": "I was satisfied with the frequency of supervision offered by my AFI.",
+    "supervision_quality": "I was satisfied with the quality of supervision by my agency field supervisor.",
+    "felt_prepared": "I feel prepared and competent to practice social work after my BSW or MSW practicum experience.",
+    "most_helpful": "What about your practicum agency was most helpful or educational?",
+    "least_helpful": "What about your practicum agency was least helpful or educational?",
+    "recommend": "Would you recommend your practicum agency to another student?",
+    "recommend_reason": "Why or why not?",
+    "comments_supervisor": "Additional comments about AFI and/or use of supervision.",
+    "other_comments": "Anything else you would like us to know about your practicum experience?",
+}
 
-The values here are written for the current umssw capstone project. They can be
-updated later if another social work program wants to adapt the pipeline to
-their own evaluation data.
-"""
+# Likert coding
+likert_map = {
+    "strongly disagree": 1,
+    "somewhat disagree": 2,
+    "neither agree nor disagree": 3,
+    "somewhat agree": 4,
+    "strongly agree": 5,
+}
 
-from __future__ import annotations
+# program level mapping
+program_level_map = {
+    "bsw": "bsw",
+    "generalist": "msw",
+    "specialization": "msw",
+}
 
-from pathlib import Path
+program_level_display_map = {
+    "bsw": "BSW",
+    "generalist": "MSW",
+    "specialization": "MSW",
+}
 
-project_root = Path(__file__).resolve().parent
+# figure labels for BSW/MSW comparison
+placement_metric_labels_long = {
+    "Placement Quality Score": "Placement Quality Score (overall)",
+    "felt_prepared": "Felt prepared for practice overall",
+    "learning_goals_met": "Learning goals met",
+    "prepared_for_practice": "Prepared to practice in this agency",
+    "supervision_frequency": "Supervision frequency",
+    "supervision_quality": "Supervision quality",
+}
 
-data_dir = project_root / "data"
+# competency reference columns
+competency_cols = [
+    "competency_1",
+    "competency_2",
+    "competency_3",
+    "competency_4",
+    "competency_5",
+    "competency_6",
+    "competency_7",
+    "competency_8",
+    "competency_9",
+]
 
-# primary evaluation export - one row per student response
-input_file = data_dir / "feedback_hernandez_20260326_v1.csv"
+# structured survey columns
+likert_cols = [
+    "comp_1_ethical_professional",
+    "comp_2_human_rights_justice",
+    "comp_3_adei",
+    "comp_4_research_informed",
+    "comp_5_policy_practice",
+    "comp_6_engage",
+    "comp_7_assess",
+    "comp_8_intervene",
+    "comp_9_evaluate",
+    "felt_prepared",
+    "learning_goals_met",
+    "prepared_for_practice",
+    "supervision_frequency",
+    "supervision_quality",
+]
 
-# program-level competency scores by academic year
-# rows: one per program_level + academic_year combination
-# columns: program_level, academic_year, competency_1 through competency_9
-competency_file = data_dir / "competency_scores_by_year.csv"
+placement_quality_cols = [
+    "felt_prepared",
+    "learning_goals_met",
+    "prepared_for_practice",
+    "supervision_frequency",
+    "supervision_quality",
+]
 
-outputs_dir = project_root / "outputs"
-figures_dir = outputs_dir / "figures"
-profiles_dir = outputs_dir / "agency_profiles"
-tables_dir = outputs_dir / "tables"
+text_cols = [
+    "comments_supervisor",
+    "least_helpful",
+    "most_helpful",
+    "other_comments",
+    "recommend_reason",
+]
 
-agency_profiles_file = profiles_dir / "agency_profiles.csv"
-agency_trends_file = tables_dir / "agency_yearly_trends.csv"
-evaluations_text_file = tables_dir / "evaluations_text.csv"
+# display labels
+likert_display = {
+    "comp_1_ethical_professional": "comp 1: ethical and professional behavior",
+    "comp_2_human_rights_justice": "comp 2: human rights and social justice",
+    "comp_3_adei": "comp 3: anti-racism, diversity, equity, and inclusion",
+    "comp_4_research_informed": "comp 4: practice-informed research",
+    "comp_5_policy_practice": "comp 5: policy practice",
+    "comp_6_engage": "comp 6: engage with individuals and communities",
+    "comp_7_assess": "comp 7: assess individuals and communities",
+    "comp_8_intervene": "comp 8: intervene with individuals and communities",
+    "comp_9_evaluate": "comp 9: evaluate practice",
+    "felt_prepared": "felt prepared overall",
+    "learning_goals_met": "learning goals met",
+    "prepared_for_practice": "prepared for practice",
+    "supervision_frequency": "supervision frequency",
+    "supervision_quality": "supervision quality",
+}
 
-# minimum student responses for an agency to be included in profile outputs
-min_responses = 3
+# compact placement quality labels
+placement_metric_labels = {
+    "felt_prepared": "felt prepared",
+    "learning_goals_met": "learning goals met",
+    "prepared_for_practice": "prepared for practice",
+    "supervision_frequency": "supervision frequency",
+    "supervision_quality": "supervision quality",
+}
 
-# concern flag thresholds - an agency is flagged when concern_threshold or more
-# of the indicators below fire at the same time
-concern_fit_score = 3.5        # placement quality score below this
-concern_sentiment = 0.05       # overall vader sentiment below this
-concern_admin_overload = 40.0  # pct of least_helpful responses tagged admin overload
-concern_supervision_least = 25.0  # pct of least_helpful responses tagged supervision
-concern_recommendation = 0.70  # recommendation rate below this
-concern_threshold = 2          # minimum simultaneous indicators to trigger a flag
+# theme display labels
+theme_labels = {
+    "administrative_overload_helpful_pct": "administrative work - helpful",
+    "administrative_overload_least_pct": "administrative overload - least helpful",
+    "direct_practice_opportunity_helpful_pct": "direct practice - helpful",
+    "direct_practice_opportunity_least_pct": "direct practice lacking - least helpful",
+    "learning_environment_helpful_pct": "learning environment - helpful",
+    "learning_environment_least_pct": "learning environment concerns - least helpful",
+    "organizational_structure_helpful_pct": "structure - helpful",
+    "organizational_structure_least_pct": "structure concerns - least helpful",
+    "social_justice_alignment_helpful_pct": "social justice alignment - helpful",
+    "social_justice_alignment_least_pct": "social justice alignment gaps - least helpful",
+    "strong_supervision_helpful_pct": "strong supervision - helpful",
+    "strong_supervision_least_pct": "supervision concerns - least helpful",
+}
 
-# misalignment flag - fires when program competency scores are strong but
-# the agency's own student narrative signals tell a different story
-# a high program score paired with low agency sentiment or high admin overload
-# suggests students are passing benchmarks but not experiencing what they describe
-misalignment_comp_floor = 85.0    # program competency average above this is "strong"
-misalignment_sentiment_ceiling = 0.10  # agency sentiment below this despite strong comps
-misalignment_admin_ceiling = 35.0  # admin overload pct above this despite strong comps
+# stopwords
+stopword_list = (
+    "a",
+    "about",
+    "above",
+    "additionally",
+    "afi",
+    "after",
+    "against",
+    "all",
+    "along",
+    "also",
+    "although",
+    "always",
+    "am",
+    "an",
+    "and",
+    "any",
+    "anything",
+    "are",
+    "area",
+    "around",
+    "as",
+    "aspect",
+    "at",
+    "be",
+    "because",
+    "been",
+    "before",
+    "being",
+    "below",
+    "between",
+    "both",
+    "but",
+    "by",
+    "can",
+    "could",
+    "d",
+    "day",
+    "did",
+    "do",
+    "does",
+    "during",
+    "each",
+    "especially",
+    "even",
+    "ever",
+    "feel",
+    "felt",
+    "few",
+    "for",
+    "from",
+    "furthermore",
+    "generally",
+    "get",
+    "got",
+    "had",
+    "has",
+    "have",
+    "he",
+    "helpful",
+    "her",
+    "hers",
+    "him",
+    "his",
+    "how",
+    "however",
+    "i",
+    "if",
+    "in",
+    "into",
+    "is",
+    "it",
+    "its",
+    "just",
+    "least",
+    "ll",
+    "lot",
+    "m",
+    "made",
+    "make",
+    "many",
+    "may",
+    "me",
+    "might",
+    "more",
+    "moreover",
+    "most",
+    "much",
+    "my",
+    "myself",
+    "never",
+    "no",
+    "nor",
+    "not",
+    "of",
+    "often",
+    "on",
+    "one",
+    "only",
+    "or",
+    "other",
+    "our",
+    "ours",
+    "ourselves",
+    "overall",
+    "part",
+    "particularly",
+    "place",
+    "point",
+    "re",
+    "really",
+    "s",
+    "said",
+    "same",
+    "she",
+    "should",
+    "since",
+    "so",
+    "some",
+    "something",
+    "sometimes",
+    "still",
+    "t",
+    "that",
+    "the",
+    "their",
+    "theirs",
+    "them",
+    "then",
+    "there",
+    "therefore",
+    "these",
+    "they",
+    "thing",
+    "things",
+    "this",
+    "those",
+    "though",
+    "through",
+    "time",
+    "to",
+    "too",
+    "ve",
+    "very",
+    "was",
+    "way",
+    "we",
+    "well",
+    "were",
+    "what",
+    "when",
+    "where",
+    "which",
+    "while",
+    "who",
+    "will",
+    "with",
+    "would",
+    "year",
+    "yet",
+    "you",
+    "your",
+    "yours",
+)
 
-# trend flag - how far recent fit score must drop below all-years average
-declining_threshold = 0.30
-
-figure_dpi = 150
-
-app_title = "practicum evaluation intelligence"
+stopwords = set(stopword_list)
