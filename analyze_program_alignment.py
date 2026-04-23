@@ -235,8 +235,6 @@ def run_analysis() -> None:
         index=False,
     )
 
-    print("\nsaved program_split_stats.csv")
-    print("saved competency_alignment_summary.csv")
 
 
 if __name__ == "__main__":
