@@ -146,10 +146,6 @@ def main() -> None:
         index=False,
     )
 
-    print("saved dataset_overview.csv")
-    print("saved descriptive_stats_main.csv")
-    print("saved program_split_summary.csv")
-
 
 if __name__ == "__main__":
     main()
