@@ -190,7 +190,7 @@ The Colab notebook mirrors the public repo workflow, and the dashboard reads the
 
 ## Author
 
-**Tomas Hernandez**
-MSBA Capstone, BMKT 699
-University of Montana
-Spring 2026
+**Tomas Hernandez**  
+MSBA Capstone, BMKT 699  
+University of Montana  
+Spring 2026  
