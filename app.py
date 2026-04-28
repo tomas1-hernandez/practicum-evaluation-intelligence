@@ -1,4 +1,4 @@
-"""Streamlit dashboard for practicum evaluation intelligence.
+"""Streamlit dashboard for practicum evaluation insights.
 
 Run from the project root:
     streamlit run app.py
@@ -24,21 +24,32 @@ from theme_lexicon import theme_dictionary
 # -----------------------------------------------------------------------------
 # palette
 # -----------------------------------------------------------------------------
-C_CONCERN = "#B34F5B"
-C_CONCERN_DEEP = "#8F3A46"
-C_CAUTION = "#A65C28"
-C_NEUTRAL = "#869299"
-C_POSITIVE = "#5F89A3"
-C_LIGHT_BLUE = "#77A8CA"
-C_MUTED_BLUE = "#B4CFE0"
-C_TEAL = "#4A6F64"
+# Maroon family (concern/alert)
+C_CONCERN = "#703A45"
+C_CONCERN_DEEP = "#4A252D"
+C_CONCERN_LT = "#EDDFDF"
+
+# Charcoal-slate (replaces amber/caution)
+C_CAUTION = "#3A4149"
+C_CAUTION_LT = "#E0E3E6"
+
+# Teal family (positive/neutral-positive)
+C_TEAL = "#2D524A"
+C_TEAL_DK = "#1E3A34"
+C_TEAL_LT = "#D8E5E0"
+C_POSITIVE = "#2D524A"
+C_LIGHT_BLUE = "#4A6F64"
+C_MUTED_BLUE = "#D8E5E0"
+
+# Neutrals
+C_NEUTRAL = "#7A8A82"
 C_BG = "#ffffff"
-C_SURFACE = "#f8f9fa"
-C_BORDER = "#e5e7eb"
-C_SPINE = "#c7cfd4"
-C_TITLE = "#1c1e21"
-C_TEXT = "#4b555b"
-C_SHADE = "rgba(241,224,225,0.65)"
+C_SURFACE = "#EDEAE4"
+C_BORDER = "#C8D0CB"
+C_SPINE = "#C8D0CB"
+C_TITLE = "#1F2328"
+C_TEXT = "#3B4B44"
+C_SHADE = "rgba(237,223,223,0.5)"
 
 
 # -----------------------------------------------------------------------------
@@ -58,16 +69,16 @@ APP_CSS = f"""
         max-width: 1400px;
     }}
     div[data-testid="metric-container"] {{
-        background-color: {C_SURFACE};
+        background-color: {C_BG};
         border: 1px solid {C_BORDER};
         border-radius: 10px;
         padding: 16px 20px;
     }}
     .badge-flag {{
         display: inline-block;
-        background: #fdecea;
+        background: {C_CONCERN_LT};
         color: {C_CONCERN};
-        border: 1px solid #f5c6c2;
+        border: 1px solid rgba(112,58,69,0.3);
         border-radius: 5px;
         padding: 3px 10px;
         font-size: 0.8rem;
@@ -75,9 +86,9 @@ APP_CSS = f"""
     }}
     .badge-ok {{
         display: inline-block;
-        background: #e8f1f9;
-        color: {C_POSITIVE};
-        border: 1px solid #b8d4ea;
+        background: {C_TEAL_LT};
+        color: {C_TEAL};
+        border: 1px solid rgba(45,82,74,0.3);
         border-radius: 5px;
         padding: 3px 10px;
         font-size: 0.8rem;
@@ -85,25 +96,25 @@ APP_CSS = f"""
     }}
     .badge-mismatch {{
         display: inline-block;
-        background: #fef3e2;
+        background: {C_CAUTION_LT};
         color: {C_CAUTION};
-        border: 1px solid #f9d5a0;
+        border: 1px solid rgba(58,65,73,0.3);
         border-radius: 5px;
         padding: 3px 10px;
         font-size: 0.8rem;
         font-weight: 600;
     }}
     .warn-box {{
-        background: #fff8f0;
+        background: {C_CAUTION_LT};
         border-left: 4px solid {C_CAUTION};
         padding: 0.75rem 1rem;
         border-radius: 0 6px 6px 0;
         font-size: 0.88rem;
-        color: #444;
+        color: {C_TITLE};
         margin-bottom: 1rem;
     }}
     .detail-card {{
-        background: {C_SURFACE};
+        background: {C_BG};
         border: 1px solid {C_BORDER};
         border-radius: 10px;
         padding: 1.2rem 1.4rem;
@@ -117,7 +128,7 @@ APP_CSS = f"""
     .detail-value {{
         font-size: 1.05rem;
         font-weight: 600;
-        color: #1a1a1a;
+        color: {C_TITLE};
         margin-bottom: 0.7rem;
     }}
     .detail-value-concern {{
@@ -127,8 +138,8 @@ APP_CSS = f"""
         margin-bottom: 0.7rem;
     }}
     .hero-block {{
-        background: {C_SURFACE};
-        border: 1px solid {C_BORDER};
+        background: {C_TEAL_DK};
+        border: 1px solid {C_TEAL_DK};
         border-radius: 12px;
         padding: 1.6rem 1.8rem 1.4rem 1.8rem;
         margin: 1rem 0 0.6rem 0;
@@ -137,14 +148,14 @@ APP_CSS = f"""
         font-size: 0.78rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: {C_NEUTRAL};
+        color: rgba(255,255,255,0.5);
         font-weight: 600;
         margin-bottom: 0.35rem;
     }}
     .hero-title {{
         font-size: 1.35rem;
         font-weight: 700;
-        color: {C_TITLE};
+        color: #ffffff;
         margin-bottom: 1.2rem;
         letter-spacing: -0.01em;
     }}
@@ -159,23 +170,24 @@ APP_CSS = f"""
         line-height: 1;
         margin-bottom: 0.35rem;
         letter-spacing: -0.02em;
+        color: #ffffff;
     }}
     .hero-number-concern {{
-        color: {C_CONCERN};
+        color: {C_CONCERN_LT};
     }}
     .hero-number-caution {{
-        color: {C_CAUTION};
+        color: {C_CAUTION_LT};
     }}
     .hero-headline {{
         font-size: 0.98rem;
         font-weight: 600;
-        color: {C_TITLE};
+        color: #ffffff;
         margin-bottom: 0.35rem;
         line-height: 1.3;
     }}
     .hero-detail {{
         font-size: 0.85rem;
-        color: {C_TEXT};
+        color: rgba(255,255,255,0.65);
         line-height: 1.45;
     }}
     .chapter-eyebrow {{
@@ -213,24 +225,24 @@ APP_CSS = f"""
         margin-bottom: 0.6rem;
     }}
     div[data-baseweb="slider"] div[role="slider"] {{
-        background-color: {C_CONCERN} !important;
-        border-color: {C_CONCERN} !important;
+        background-color: {C_TEAL} !important;
+        border-color: {C_TEAL} !important;
     }}
     div[data-baseweb="slider"] > div > div > div > div {{
-        background: {C_CONCERN} !important;
+        background: {C_TEAL} !important;
     }}
     div[data-baseweb="radio"] input[type="radio"]:checked + div {{
-        border-color: {C_CONCERN} !important;
-        background-color: {C_CONCERN} !important;
+        border-color: {C_TEAL} !important;
+        background-color: {C_TEAL} !important;
     }}
     div[data-baseweb="input"]:focus-within,
     div[data-baseweb="base-input"]:focus-within {{
-        border-color: {C_CONCERN} !important;
-        box-shadow: 0 0 0 1px {C_CONCERN} !important;
+        border-color: {C_TEAL} !important;
+        box-shadow: 0 0 0 1px {C_TEAL} !important;
     }}
     div[data-baseweb="select"]:focus-within > div {{
-        border-color: {C_CONCERN} !important;
-        box-shadow: 0 0 0 1px {C_CONCERN} !important;
+        border-color: {C_TEAL} !important;
+        box-shadow: 0 0 0 1px {C_TEAL} !important;
     }}
 </style>
 """
@@ -264,8 +276,8 @@ def load_profiles() -> pd.DataFrame:
     df["misalignment_flag"] = df["misalignment_flag"].fillna("no flag")
     df["fit_trend"] = df["fit_trend"].fillna("stable")
     df["is_flagged"] = df["concern_flag"].str.lower().eq("review recommended")
-    df["is_misaligned"] = df["misalignment_flag"].str.lower().eq(
-        "score-narrative mismatch"
+    df["is_misaligned"] = (
+        df["misalignment_flag"].str.lower().eq("score-narrative mismatch")
     )
 
     return df.sort_values(
@@ -300,9 +312,9 @@ def load_trend_data() -> pd.DataFrame:
     df["concern_flag"] = df["concern_flag"].fillna("no flag")
     df["is_flagged"] = df["concern_flag"].str.lower().eq("review recommended")
 
-    return df.sort_values(["academic_year_start", "agency_name_display"]).reset_index(
-        drop=True
-    )
+    return df.sort_values(
+        ["academic_year_start", "agency_name_display"]
+    ).reset_index(drop=True)
 
 
 # -----------------------------------------------------------------------------
@@ -316,12 +328,10 @@ def base_layout(
     """Apply one shared Plotly layout."""
     title_text = f"<b>{title}</b>"
     if subtitle:
-        title_text += (
-            f"<br><span style='font-size:11px;color:{C_NEUTRAL}'>{subtitle}</span>"
-        )
+        title_text += f"<br><span style='font-size:11px;color:{C_NEUTRAL}'>{subtitle}</span>"
 
     fig.update_layout(
-        font=dict(family="sans-serif", size=12, color="#1a1a1a"),
+        font=dict(family="sans-serif", size=12, color=C_TITLE),
         legend=dict(
             orientation="h",
             x=1,
@@ -342,7 +352,7 @@ def base_layout(
         },
     )
     fig.update_xaxes(showgrid=False, zeroline=False)
-    fig.update_yaxes(gridcolor="#f0f0f0", zeroline=False)
+    fig.update_yaxes(gridcolor=C_SURFACE, zeroline=False)
     return fig
 
 
@@ -372,7 +382,7 @@ def build_sidebar(df: pd.DataFrame) -> pd.DataFrame:
     """Build sidebar filters and return the filtered dataframe."""
     st.sidebar.markdown(f"### {app_title.title()}")
     st.sidebar.markdown(
-        "<span style='font-size:0.8rem;color:#888'>Field Education Review Dashboard</span>",
+        f"<span style='font-size:0.8rem;color:{C_NEUTRAL}'>Field Education Review Dashboard</span>",
         unsafe_allow_html=True,
     )
     st.sidebar.markdown("---")
@@ -411,9 +421,7 @@ def build_sidebar(df: pd.DataFrame) -> pd.DataFrame:
     search = st.sidebar.text_input("Search agency name", "")
 
     st.sidebar.markdown("---")
-    st.sidebar.caption(
-        "Rerun python run_all.py to refresh the data. -Tomas"
-    )
+    st.sidebar.caption("Rerun python run_all.py to refresh the data. -Tomas")
 
     filtered = df.copy()
     filtered = filtered[
@@ -458,39 +466,32 @@ def render_hero(profiles: pd.DataFrame, trend_df: pd.DataFrame) -> None:
     pct_flagged = round((flagged / total) * 100, 1)
     flagged_ratio_10 = round((flagged / total) * 10)
 
-    latest_year = trend_df.sort_values("academic_year_start").iloc[-1]["academic_year"]
+    latest_year = trend_df.sort_values("academic_year_start").iloc[-1][
+        "academic_year"
+    ]
     latest_data = trend_df[trend_df["academic_year"] == latest_year]
     total_resp = latest_data["response_count"].sum()
     weighted_mean = (
-        (latest_data["placement_quality_score"] * latest_data["response_count"]).sum()
-        / total_resp
-    )
+        latest_data["placement_quality_score"] * latest_data["response_count"]
+    ).sum() / total_resp
 
     if weighted_mean < concern_fit_score:
         pqs_number = f"{weighted_mean:.2f}"
         pqs_color_class = "hero-number-concern"
         pqs_headline = "Program-wide score fell below the concern threshold for the first time."
-        pqs_detail = (
-            f"Mean Placement Quality Score dropped to {weighted_mean:.2f} in {latest_year}."
-        )
+        pqs_detail = f"Mean Placement Quality Score dropped to {weighted_mean:.2f} in {latest_year}."
     else:
         pqs_number = f"{weighted_mean:.2f}"
         pqs_color_class = ""
         pqs_headline = f"Program-wide score held above the concern threshold in {latest_year}."
-        pqs_detail = (
-            f"Mean Placement Quality Score was {weighted_mean:.2f}, above the {concern_fit_score:.1f} threshold."
-        )
+        pqs_detail = f"Mean Placement Quality Score was {weighted_mean:.2f}, above the {concern_fit_score:.1f} threshold."
 
     if misaligned > 0:
-        mis_headline = (
-            f"Score-narrative mismatch in {misaligned} {'agency' if misaligned == 1 else 'agencies'}."
-        )
+        mis_headline = f"Score-narrative mismatch in {misaligned} {'agency' if misaligned == 1 else 'agencies'}."
         mis_detail = "These agencies met formal competency benchmarks but students reported some of the weakest experiences in the dataset."
     else:
         mis_headline = "No score-narrative mismatches this cycle."
-        mis_detail = (
-            "Agencies with strong benchmark scores also showed reasonable narrative feedback this cycle."
-        )
+        mis_detail = "Agencies with strong benchmark scores also showed reasonable narrative feedback this cycle."
 
     st.markdown(
         f"""
@@ -659,7 +660,9 @@ def chart_fit_vs_recommend(df: pd.DataFrame) -> go.Figure:
             x=flagged["placement_quality_score"],
             y=flagged["recommendation_rate_pct"],
             mode="markers",
-            marker=dict(color=C_CONCERN, size=10, opacity=0.85, symbol="triangle-up"),
+            marker=dict(
+                color=C_CONCERN, size=10, opacity=0.85, symbol="triangle-up"
+            ),
             showlegend=False,
             hovertemplate=(
                 "<b>%{text}</b><br>"
@@ -705,12 +708,12 @@ def chart_fit_vs_recommend(df: pd.DataFrame) -> go.Figure:
         text="<i>Both signals weak</i>",
         showarrow=False,
         xanchor="left",
-        font=dict(color="#d9807a", size=11),
+        font=dict(color=C_CONCERN, size=11),
     )
     fig = base_layout(
         fig,
         "Flagged agencies cluster where placement quality and recommendation rates are both low",
-        "Red triangles mark agencies needing review. Gray-blue dots show unflagged agencies. The shaded area marks where both measures fall below the concern thresholds.",
+        "Maroon triangles mark agencies needing review. Teal dots show unflagged agencies. The shaded area marks where both measures fall below the concern thresholds.",
     )
     fig.update_xaxes(range=[1.8, 5.05], title="Placement Quality Score")
     fig.update_yaxes(range=[0, 104], title="Recommendation rate (%)")
@@ -754,7 +757,7 @@ def chart_theme_summary(df: pd.DataFrame) -> go.Figure:
             x=theme_df["helpful"],
             y=theme_df["theme"],
             mode="markers",
-            marker=dict(color=C_POSITIVE, size=11),
+            marker=dict(color=C_TEAL, size=11),
             showlegend=False,
             hovertemplate="<b>%{y}</b><br>Helpful: %{x:.1f}%<extra></extra>",
         )
@@ -772,8 +775,8 @@ def chart_theme_summary(df: pd.DataFrame) -> go.Figure:
     fig = base_layout(
         fig,
         "Strong placements rely on supervision and real practice; weak ones suffer from paperwork and limited client contact",
-        f"<span style='color:{C_POSITIVE}'><b>Blue</b></span> = appeared more often in most-helpful comments. "
-        f"<span style='color:{C_CONCERN}'><b>Red</b></span> = appeared more often in least-helpful comments.",
+        f"<span style='color:{C_TEAL}'><b>Teal</b></span> = appeared more often in most-helpful comments. "
+        f"<span style='color:{C_CONCERN}'><b>Maroon</b></span> = appeared more often in least-helpful comments.",
     )
     fig.update_layout(showlegend=False, height=420)
     fig.update_xaxes(
@@ -792,7 +795,11 @@ def chart_lowest_fit_scores(df: pd.DataFrame) -> go.Figure:
             "Adjust the sidebar filters to see the lowest-scoring flagged agencies.",
         )
 
-    bottom = flagged.sort_values("placement_quality_score", ascending=True).head(10).copy()
+    bottom = (
+        flagged.sort_values("placement_quality_score", ascending=True)
+        .head(10)
+        .copy()
+    )
     bottom["label"] = (
         bottom["agency_name_display"].apply(
             lambda s: s if len(s) <= 40 else s[:39].rstrip() + "…"
@@ -838,7 +845,9 @@ def chart_lowest_fit_scores(df: pd.DataFrame) -> go.Figure:
     return fig
 
 
-def chart_trend_spotlight(trend_df: pd.DataFrame, profiles_df: pd.DataFrame) -> go.Figure:
+def chart_trend_spotlight(
+    trend_df: pd.DataFrame, profiles_df: pd.DataFrame
+) -> go.Figure:
     """Highlight the weakest flagged multi-year trajectories in the current view."""
     year_counts = (
         trend_df[trend_df["data_quality"] == "sufficient"]
@@ -846,11 +855,14 @@ def chart_trend_spotlight(trend_df: pd.DataFrame, profiles_df: pd.DataFrame) -> 
         .count()
     )
     sufficient = year_counts[year_counts >= 3].index
-    trend_sufficient = trend_df[trend_df["agency_name"].isin(sufficient)].copy()
+    trend_sufficient = trend_df[
+        trend_df["agency_name"].isin(sufficient)
+    ].copy()
 
     spotlight_df = (
         profiles_df[
-            profiles_df["is_flagged"] & profiles_df["agency_name"].isin(sufficient)
+            profiles_df["is_flagged"]
+            & profiles_df["agency_name"].isin(sufficient)
         ]
         .sort_values(
             ["concern_indicator_count", "placement_quality_score"],
@@ -896,7 +908,9 @@ def chart_trend_spotlight(trend_df: pd.DataFrame, profiles_df: pd.DataFrame) -> 
         .reset_index()
         .rename(columns={0: "mean_score"})
         .merge(
-            trend_sufficient[["academic_year", "academic_year_start"]].drop_duplicates(),
+            trend_sufficient[
+                ["academic_year", "academic_year_start"]
+            ].drop_duplicates(),
             on="academic_year",
         )
         .sort_values("academic_year_start")
@@ -907,7 +921,7 @@ def chart_trend_spotlight(trend_df: pd.DataFrame, profiles_df: pd.DataFrame) -> 
             x=yearly_mean["academic_year"],
             y=yearly_mean["mean_score"].round(2),
             mode="lines",
-            line=dict(color="#8d99ae", width=1.6, dash="dash"),
+            line=dict(color=C_NEUTRAL, width=1.6, dash="dash"),
             showlegend=False,
             hovertemplate=(
                 "<b>All-agency mean</b><br>"
@@ -917,14 +931,14 @@ def chart_trend_spotlight(trend_df: pd.DataFrame, profiles_df: pd.DataFrame) -> 
         )
     )
 
-    rose_shades = [C_CONCERN_DEEP, C_CONCERN, "#CC7A85"]
+    maroon_shades = [C_CONCERN_DEEP, C_CONCERN, "#8B5A62"]
     label_items = []
     if not yearly_mean.empty:
         label_items.append(
             {
                 "y": yearly_mean["mean_score"].iloc[-1],
                 "text": "All-agency mean",
-                "color": "#8d99ae",
+                "color": C_NEUTRAL,
                 "bold": False,
             }
         )
@@ -935,7 +949,7 @@ def chart_trend_spotlight(trend_df: pd.DataFrame, profiles_df: pd.DataFrame) -> 
             trend_sufficient["agency_name"] == agency_name
         ].sort_values("academic_year_start")
 
-        color = rose_shades[i % len(rose_shades)]
+        color = maroon_shades[i % len(maroon_shades)]
         display = row["agency_name_display"]
         short = display[:28] + "…" if len(display) > 28 else display
 
@@ -969,7 +983,11 @@ def chart_trend_spotlight(trend_df: pd.DataFrame, profiles_df: pd.DataFrame) -> 
     min_gap = 0.22
     placed_y = None
     for item in label_items:
-        y_placed = item["y"] if placed_y is None else min(item["y"], placed_y - min_gap)
+        y_placed = (
+            item["y"]
+            if placed_y is None
+            else min(item["y"], placed_y - min_gap)
+        )
         placed_y = y_placed
         fig.add_annotation(
             x=1.01,
@@ -1008,7 +1026,7 @@ def chart_trend_spotlight(trend_df: pd.DataFrame, profiles_df: pd.DataFrame) -> 
     fig = base_layout(
         fig,
         "Trend tracking exposes agencies that have stayed weak over time",
-        f"Gray lines show all agencies. Highlighted agencies are flagged sites with the weakest recent multi-year trajectories. {flagged_count} of {total_count} agencies with sufficient multi-year data are highlighted here.",
+        f"Teal lines show all agencies. Highlighted agencies are flagged sites with the weakest recent multi-year trajectories. {flagged_count} of {total_count} agencies with sufficient multi-year data are highlighted here.",
     )
     fig.update_xaxes(title="Academic year", tickangle=40)
     fig.update_yaxes(range=[1.3, 5.3], title="Placement Quality Score")
@@ -1036,14 +1054,16 @@ def summarize_program_trends(
                 "flagged_agencies": int(group["is_flagged"].sum()),
                 "mean_pqs": round(
                     (
-                        group["placement_quality_score"] * group["response_count"]
+                        group["placement_quality_score"]
+                        * group["response_count"]
                     ).sum()
                     / total_responses,
                     2,
                 ),
                 "mean_recommendation_rate_pct": round(
                     (
-                        group["recommendation_rate_pct"] * group["response_count"]
+                        group["recommendation_rate_pct"]
+                        * group["response_count"]
                     ).sum()
                     / total_responses,
                     1,
@@ -1079,8 +1099,10 @@ def chart_program_trend(summary_df: pd.DataFrame, metric: str) -> go.Figure:
     col, axis_label, y_range = metric_map[metric]
 
     fig = px.line(summary_df, x="academic_year", y=col)
-    fig = base_layout(fig, f"{metric} - trend across agencies in the current view")
-    fig.update_traces(line_color=C_POSITIVE, line_width=2.4)
+    fig = base_layout(
+        fig, f"{metric} - trend across agencies in the current view"
+    )
+    fig.update_traces(line_color=C_TEAL, line_width=2.4)
 
     if metric == "Mean Placement Quality Score":
         fig.add_hline(
@@ -1148,7 +1170,9 @@ def trend_badge(row: pd.Series) -> str:
     if trend == "declining":
         return f'<span style="color:{C_CONCERN};font-weight:600">▼ Declining</span>'
     if trend == "improving":
-        return f'<span style="color:{C_POSITIVE};font-weight:600">▲ Improving</span>'
+        return (
+            f'<span style="color:{C_TEAL};font-weight:600">▲ Improving</span>'
+        )
     return f'<span style="color:{C_NEUTRAL}">- Stable</span>'
 
 
@@ -1159,9 +1183,7 @@ def render_top_phrases(value: object, limit: int = 8, top_n: int = 3) -> None:
         return
 
     phrases = [
-        part.split(":")[0].strip()
-        for part in value.split("|")
-        if ":" in part
+        part.split(":")[0].strip() for part in value.split("|") if ":" in part
     ]
 
     if not phrases:
@@ -1211,8 +1233,8 @@ def chart_agency_trend(
             y=s["placement_quality_score"],
             mode="lines+markers",
             name="Placement Quality Score",
-            line=dict(color=C_POSITIVE, width=3),
-            marker=dict(color=C_POSITIVE, size=7),
+            line=dict(color=C_TEAL, width=3),
+            marker=dict(color=C_TEAL, size=7),
             hovertemplate=(
                 "<b>%{x}</b><br>"
                 "Placement Quality Score: %{y:.2f}<extra></extra>"
@@ -1309,7 +1331,9 @@ def render_agency_review(
         filtered["agency_name_display"].tolist(),
         label_visibility="collapsed",
     )
-    row = filtered.loc[filtered["agency_name_display"] == selected_label].iloc[0]
+    row = filtered.loc[filtered["agency_name_display"] == selected_label].iloc[
+        0
+    ]
 
     badge_html = flag_badge(row)
     mis_badge = misalignment_badge(row)
@@ -1359,7 +1383,9 @@ def render_agency_review(
     )
 
     c1, c2, c3 = st.columns(3)
-    c1.metric("Placement Quality Score", f"{row['placement_quality_score']:.2f}")
+    c1.metric(
+        "Placement Quality Score", f"{row['placement_quality_score']:.2f}"
+    )
     c2.metric("Recommendation rate", f"{row['recommendation_rate_pct']:.1f}%")
     c3.metric("Sentiment score", f"{row['overall_sentiment_score']:.3f}")
 
@@ -1407,7 +1433,9 @@ def render_agency_review(
         st.markdown("**Least-helpful phrases**")
         render_top_phrases(row["least_helpful_top_bigrams"])
 
-    agency_trend = trend_df[trend_df["agency_name"] == row["agency_name"]].copy()
+    agency_trend = trend_df[
+        trend_df["agency_name"] == row["agency_name"]
+    ].copy()
     st.plotly_chart(
         chart_agency_trend(
             agency_trend,
@@ -1480,7 +1508,7 @@ def main() -> None:
         unsafe_allow_html=True,
     )
     st.markdown(
-        "<p style='color:#888;font-size:0.88rem;margin-top:0'>Field Education Review · University of Montana School of Social Work</p>",
+        f"<p style='color:{C_NEUTRAL};font-size:0.88rem;margin-top:0'>Field Education Review · University of Montana School of Social Work</p>",
         unsafe_allow_html=True,
     )
 
@@ -1488,7 +1516,9 @@ def main() -> None:
 
     filtered = build_sidebar(profiles)
     if filtered.empty:
-        st.warning("No agencies match the current filters. Adjust the sidebar and try again.")
+        st.warning(
+            "No agencies match the current filters. Adjust the sidebar and try again."
+        )
         return
 
     filtered.attrs["full_total"] = len(profiles)
@@ -1498,7 +1528,7 @@ def main() -> None:
         '<div class="chapter-eyebrow">Part 1 of 4</div>'
         '<div class="chapter-heading">Where concern clusters now</div>'
         '<div class="chapter-bridge">Start with the scatter view below. It shows which agencies have both a low placement quality score '
-        "and a low recommendation rate. Red triangles are the flagged agencies. The blush zone marks where both signals "
+        "and a low recommendation rate. Maroon triangles are the flagged agencies. The shaded zone marks where both signals "
         "fall below threshold at the same time.</div>",
         unsafe_allow_html=True,
     )
@@ -1511,7 +1541,9 @@ def main() -> None:
         "whose placement quality has stayed low or dropped recently across multiple years.</div>",
         unsafe_allow_html=True,
     )
-    st.plotly_chart(chart_trend_spotlight(trend_df, filtered), use_container_width=True)
+    st.plotly_chart(
+        chart_trend_spotlight(trend_df, filtered), use_container_width=True
+    )
 
     st.markdown(
         '<div class="chapter-eyebrow">Part 3 of 4</div>'
@@ -1523,7 +1555,9 @@ def main() -> None:
 
     c1, c2 = st.columns(2)
     c1.plotly_chart(chart_flag_summary(filtered), use_container_width=True)
-    c2.plotly_chart(chart_lowest_fit_scores(filtered), use_container_width=True)
+    c2.plotly_chart(
+        chart_lowest_fit_scores(filtered), use_container_width=True
+    )
 
     c3, c4 = st.columns([1.1, 0.9])
     c3.plotly_chart(chart_theme_summary(filtered), use_container_width=True)
