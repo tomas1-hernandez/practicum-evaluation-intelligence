@@ -6,7 +6,7 @@ Field education is where social work begins. This keeps it strong.
 
 Practicum Evaluation Insights is a Python workflow that turns end-of-practicum student evaluations into agency profiles, review flags, trend views, report figures, and an interactive Streamlit dashboard. This system was created for social work education programs that gather student feedback each year. It helps clarify trends in agencies over time.
 
----
+
 
 ## Overview
 
@@ -16,7 +16,7 @@ This project emerged from field education work and the annual review of practicu
 
 Practicum Evaluation Insights was developed to address this issue. It does not judge or label agencies but facilitates a clearer understanding of placement history for the Field Education Team, helping to detect repeated issues earlier and ensuring consistent follow-up.
 
----
+
 
 ## Why This Repository Exists
 
@@ -29,7 +29,7 @@ This repository outlines a review process that can be:
 - Handed off to future staff or students
 - Maintained without ongoing support from the original author
 
----
+
 
 ## What Gets Missed Without a Review Process
 
@@ -44,17 +44,17 @@ Without a review process:
 
 This workflow addresses the problem.
 
----
+
 
 ## Project Links
 
 | Resource | Link |
-|---|---|
+|||
 | Live Placement Quality Dashboard | [ssw-placement-quality-dashboard.streamlit.app](https://ssw-placement-quality-dashboard.streamlit.app/) |
 | Google Colab Walkthrough | [Open in Colab](https://colab.research.google.com/drive/1llw5HmqDmM9jRuJpVPn5R9kdvfHo3xU-?usp=sharing) |
 | Digital Portfolio | [ssw-practicum-insights.netlify.app](https://ssw-practicum-insights.netlify.app/) |
 
----
+
 
 ## What the Workflow Does
 
@@ -77,7 +77,7 @@ The workflow consists of five stages:
 
 The workflow does not make final decisions for people. It produces structured review signals that the Field Education Team can interpret alongside agency history, site context, and program knowledge.
 
----
+
 
 ## What the Data Shows
 
@@ -92,7 +92,7 @@ Analysis of 2,258 evaluations from 222 practicum agencies over 12 years revealed
 
 These results highlight that competency success and placement quality assess different aspects and are not interchangeable.
 
----
+
 
 ## For Non-Technical Users
 
@@ -105,7 +105,7 @@ The Google Colab notebook is the easiest entry point for users who want to run t
 
 No Python installation is required. No command line is required. Any staff member with a Google account can run it and get the same results.
 
----
+
 
 ## Quick Start for Local Installation
 
@@ -142,7 +142,7 @@ streamlit run app.py
 
 Python 3.10 or higher is recommended.
 
----
+
 
 ## Recommended Use Order
 
@@ -156,14 +156,14 @@ For a new user or a future handoff, the best order is:
 6. Open the dashboard with `streamlit run app.py`
 7. Review the saved outputs in `outputs/`
 
----
+
 
 ## Workflow Order
 
 `run_all.py` runs these scripts in order:
 
 | Step | Script | What it does |
-|---|---|---|
+||||
 | 1 | `pipeline.py` | Cleans, scores, tags, and aggregates evaluations into agency profiles and trends |
 | 2 | `create_visualizations.py` | Generates static report figures as PNG files |
 | 3 | `analyze_program_alignment.py` | Conducts BSW vs MSW comparisons and competency analysis |
@@ -171,7 +171,7 @@ For a new user or a future handoff, the best order is:
 
 Run components individually as needed or execute the full workflow with `python run_all.py`.
 
----
+
 
 ## Repository Structure
 
@@ -206,7 +206,7 @@ practicum-evaluation-intelligence/
         |-- [static PNG figures]
 ```
 
----
+
 
 ## Input Data Requirements
 
@@ -217,7 +217,7 @@ The primary evaluation file should contain one row per student response.
 Required columns at minimum:
 
 | Column | Type | Description |
-|---|---|---|
+||||
 | `agency_name` | string | Practicum agency name |
 | `academic_year` | string | Academic year label, for example `2024-2025` |
 | `program_year` | string | Student level, such as `bsw`, `generalist`, or `specialization` |
@@ -252,12 +252,12 @@ If your column names differ, update the mappings in `constants.py` before runnin
 The competency scores file should contain one row per academic year and program-level combination.
 
 | Column | Type | Description |
-|---|---|---|
+||||
 | `program_level` | string | `BSW` or `MSW` |
 | `academic_year` | string | Academic year label matching the evaluation file |
 | `competency_1` through `competency_9` | float | Program-level benchmark scores from 0 to 100 |
 
----
+
 
 ## Outputs
 
@@ -268,7 +268,7 @@ All outputs are written to the `outputs/` folder.
 One row per agency. This is the main output used by the dashboard and for field education leadership review.
 
 | Column | Description |
-|---|---|
+|||
 | `agency_name_display` | Standardized agency name |
 | `placement_quality_score` | Mean of six Likert items, scored 1 to 5 |
 | `recommendation_rate` | Share of students who would recommend the agency |
@@ -300,7 +300,7 @@ Static PNG figures for the written report, portfolio, and presentation. Generate
 
 Descriptive tables, program-level split outputs, competency alignment outputs, and supporting summaries.
 
----
+
 
 ## How the Flag Logic Works
 
@@ -309,7 +309,7 @@ An agency is flagged for leadership review only when **two or more concern signa
 ### The five concern signals
 
 | Signal | Threshold | Rationale |
-|---|---|---|
+||||
 | Placement Quality Score | Below 3.5 | Marks the lower portion of the distribution where scores begin to meaningfully separate from the bulk of agencies |
 | Recommendation rate | Below 70% | Indicates a meaningful share of students would not recommend the site to a future student |
 | Sentiment score | Below 0.05 | Captures language trending toward neutral or negative in professional evaluation writing |
@@ -324,7 +324,7 @@ The pipeline also identifies agencies whose recent Placement Quality Score has d
 
 Trend data should be interpreted alongside institutional context. Agencies that have undergone mergers, staffing transitions, or other organizational changes may show apparent declines that reflect disruption rather than a lasting shift in placement quality.
 
----
+
 
 ## Dashboard
 
@@ -339,7 +339,7 @@ The Streamlit dashboard reads the saved CSV outputs and provides six interactive
 
 To refresh the dashboard after a new evaluation cycle, run `python run_all.py` and restart the dashboard. The dashboard itself requires no code changes between cycles.
 
----
+
 
 ## Responsible Interpretation
 
@@ -358,7 +358,7 @@ The workflow helps the Field Education Team:
 
 That sequence is intentional. The workflow supports judgment. It does not replace it.
 
----
+
 
 ## Adapting This Workflow for Another Program
 
@@ -382,7 +382,7 @@ The logic does not depend on UMSSW-specific fields. Programs using Qualtrics, So
 
 For many programs, the main setup work is front-loaded. Once the first mapping is complete, yearly updates are a matter of adding the next file and rerunning the workflow.
 
----
+
 
 ## Annual Update Process
 
@@ -395,7 +395,7 @@ At the end of each evaluation cycle:
 
 The pipeline is reproducible. Running it on the same input files produces the same outputs.
 
----
+
 
 ## Limitations
 
@@ -405,7 +405,7 @@ The pipeline is reproducible. Running it on the same input files produces the sa
 - The theme tagging lexicon was developed for social work evaluation language. Programs with meaningfully different comment styles may need to revise or expand `theme_lexicon.py`.
 - Competency scores used in the alignment analysis are program-level aggregates joined to agency evaluations. Individual-level competency data was not available.
 
----
+
 
 ## Requirements
 
@@ -418,7 +418,7 @@ pip install -r requirements.txt
 Main packages include:
 
 | Package | Purpose |
-|---|---|
+|||
 | `pandas` | Data loading, cleaning, and aggregation |
 | `numpy` | Numerical operations |
 | `matplotlib` | Static report figures |
@@ -432,7 +432,7 @@ Main packages include:
 
 Python 3.10 or higher is recommended.
 
----
+
 
 ## Reproducibility
 
@@ -446,7 +446,7 @@ To reproduce this project from scratch:
 
 All outputs are generated from the workflow and saved to the `outputs/` folder. The dashboard reads saved CSV outputs. If the data changes, rerun the workflow before opening the dashboard again.
 
----
+
 
 ## Handoff and Maintenance Notes
 
@@ -468,7 +468,7 @@ If you are inheriting this repository, start by reading:
 3. `run_all.py`
 4. `pipeline.py`
 
----
+
 
 ## Author
 
