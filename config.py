@@ -1,4 +1,4 @@
-"""Settings for practicum evaluation intelligence.
+"""Settings for practicum evaluation insights.
 
 Paths and rules are listed to prevent hard-coded values from being spread across the code. If you need to change the data file, output folders, or review thresholds, start by checking here.
 
@@ -50,4 +50,4 @@ declining_threshold = 0.30
 figure_dpi = 300
 
 # dashboard
-app_title = "practicum evaluation intelligence"
+app_title = "practicum evaluation insights"
