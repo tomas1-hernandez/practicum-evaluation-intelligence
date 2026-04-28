@@ -1,4 +1,4 @@
-"""Build all static report figures for practicum evaluation intelligence.
+"""Build all static report figures for practicum evaluation insights.
 
 Run after pipeline.py:
     python create_visualizations.py
