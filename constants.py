@@ -1,4 +1,4 @@
-"""Shared constants for practicum evaluation intelligence."""
+"""Shared constants for practicum evaluation insights."""
 
 # survey question text
 survey_questions = {
