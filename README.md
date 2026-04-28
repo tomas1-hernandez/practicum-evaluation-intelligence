@@ -50,9 +50,9 @@ This workflow addresses the problem.
 
 | Resource | Link |
 |---|---|
-| Streamlit dashboard | https://umssw-placement-quality-dashboard.streamlit.app |
+| Streamlit dashboard | https://ssw-placement-quality-dashboard.streamlit.app/ |
 | Google Colab walkthrough | https://colab.research.google.com/drive/1llw5HmqDmM9jRuJpVPn5R9kdvfHo3xU-?usp=sharing |
-| Digital portfolio | https://ssw-peit.netlify.app |
+| Digital portfolio | https://ssw-practicum-insights.netlify.app/ |
 
 
 
