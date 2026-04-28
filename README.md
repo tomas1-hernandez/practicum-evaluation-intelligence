@@ -1,9 +1,7 @@
 # Practicum Evaluation Insights
 
-**A review workflow that helps field education teams monitor practicum agency quality over time.**
-
-Field education is where social work begins. This keeps it strong.
-
+*A review workflow that helps field education teams monitor practicum agency quality over time.*
+ 
 Practicum Evaluation Insights is a Python workflow that turns end-of-practicum student evaluations into agency profiles, review flags, trend views, report figures, and an interactive Streamlit dashboard. This system was created for social work education programs that gather student feedback each year. It helps clarify trends in agencies over time.
 
 
